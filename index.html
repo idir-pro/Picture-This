@@ -15,7 +15,40 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <!-- I use landscape images for screens smaller than 960px
+      and square images for screens 960px and larger.
+ The srcset lets the browser choose the best image
+size depending on the screen. -->
+
+    <picture>
+      <source media="(min-width: 960px)"
+  srcset="
+    images/museum-square-480x.jpg 480w,
+    images/museum-square-640x.jpg 640w,
+    images/museum-square-800x.jpg 800w,
+    images/museum-square-960x.jpg 960w,
+    images/museum-square-1280x.jpg 1280w,
+    images/museum-square-1440x.jpg 1440w,
+    images/museum-square-1600x.jpg 1600w,
+    images/museum-square-1920x.jpg 1920w,
+    images/museum-square-2400x.jpg 2400w"
+  sizes="50vw">
+  <img
+  src="images/museum-960x.jpg"
+  srcset="
+    images/museum-320x.jpg 320w,
+    images/museum-480x.jpg 480w,
+    images/museum-640x.jpg 640w,
+    images/museum-720x.jpg 720w,
+    images/museum-960x.jpg 960w,
+    images/museum-1440x.jpg 1440w,
+    images/museum-1920x.jpg 1920w,
+    images/museum-2160x.jpg 2160w,
+    images/museum-2880x.jpg 2880w"
+    sizes="100vw"
+    alt="Interior of a museum gallery with paintings and seating">
+    </picture>
+
 
   </header>
 </body>
